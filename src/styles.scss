@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(0, 61, 146);
+}
+body {
+  font-family: sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.current__date {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 1rem;
+  background-color: rgb(0, 61, 146);
+  max-width: 668px;
+}
+.month__year{
+  font-weight: 700;
+  width: 70%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.calendar__container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 668px;
+}
+
+.calendar {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+.weekday__name {
+  font-weight: 800;
+  text-align: center;
+  padding: 6px;
+  @media screen and (min-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
+
+.calendar__days {
+  text-align: center;
+  width: calc(100%/7);
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
+.current__day_highlighter {
+  border-radius: 3px;
+  background-color: rgb(0, 61, 146);
+  color: #fff;
+  font-weight: 700;
+}
+.date__value {
+  height: 100px;
+  width: 100px;
+  background-color: #efdfef;
+}
+.button__container{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0;
+}
+.nav__button{
+  margin: 6px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}

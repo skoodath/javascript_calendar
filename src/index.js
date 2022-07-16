@@ -1,7 +1,9 @@
-import "./styles.css";
+import "./styles.scss";
 
 let nextButton = document.getElementById("next");
 let prevButton = document.getElementById("prev");
+let prevYearButton = document.getElementById("prevyear");
+let nextYearButton = document.getElementById("nextyear");
 
 let currentDate = new Date();
 let month = currentDate.getMonth();
@@ -53,10 +55,10 @@ const showCalendar = (m, y) => {
       } else {
         let cell = document.createElement("td");
         let cellText = document.createTextNode(date);
-        if (date === currentDate.getDate()) {
-          cell.setAttribute("class", "current__day_highlighter");
-        }
         cell.setAttribute("class", "calendar__days");
+        if (currentDate.getDate() === date) {
+          cell.classList.add("current__day_highlighter");
+        }
         cell.appendChild(cellText);
         dateRow.appendChild(cell);
         date++;
@@ -81,5 +83,21 @@ const prevMonth = () => {
   showCalendar(month, year);
 };
 
+const prevYear = () => {
+  year = year - 1;
+  showCalendar(month, year);
+}
+
+const nextYear = () => {
+  year = year + 1;
+  showCalendar(month, year);
+}
+
 nextButton.addEventListener("click", nextMonth);
 prevButton.addEventListener("click", prevMonth);
+prevYearButton.addEventListener("click", prevYear);
+nextYearButton.addEventListener("click", nextYear);
+nextButton.addEventListener("keypress", nextMonth);
+prevButton.addEventListener("keypress", prevMonth);
+prevYearButton.addEventListener("keypress", prevYear);
+nextYearButton.addEventListener("keypress", nextYear);
