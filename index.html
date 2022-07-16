@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Calendar</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <!--  -->
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1 class="page__title">Calendar</h1>
+      </header>
+      <div class="current__date">
+        <span id="current_dt" class="month__year"></span>
+      </div>
+      <table class="calendar">
+        <thead>
+          <tr class="weekday" id="weekday">
+            <td class="weekday__name" id="weekday_sn" data-id="0">Sunday</td>
+            <td class="weekday__name" id="weekday_mn" data-id="1">Monday</td>
+            <td class="weekday__name" id="weekday_ts" data-id="2">Tuesday</td>
+            <td class="weekday__name" id="weekday_wd" data-id="3">Wednesday</td>
+            <td class="weekday__name" id="weekday_th" data-id="4">Thursday</td>
+            <td class="weekday__name" id="weekday_fr" data-id="5">Friday</td>
+            <td class="weekday__name" id="weekday_fr" data-id="6">Saturday</td>
+          </tr>
+        </thead>
+        <tbody id="calendar__body"></tbody>
+      </table>
+      <div>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
