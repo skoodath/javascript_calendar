@@ -28,12 +28,13 @@ const getFirstDay = (yr, mn) => new Date(yr, mn).getDay();
 const getDaysOfMonth = (yr, mn) => new Date(yr, mn, 0).getDate();
 
 const showCalendar = (m, y) => {
+
   let date = 1;
 
   let dateDiv = document.getElementById("current_dt");
 
-  let firstDay = getFirstDay(year, month);
-  let noOfDays = getDaysOfMonth(year, month);
+  let firstDay = getFirstDay(y, m);
+  let noOfDays = getDaysOfMonth(y, m);
 
   let calendarBody = document.getElementById("calendar__body");
 
@@ -42,6 +43,7 @@ const showCalendar = (m, y) => {
   calendarBody.innerHTML = "";
 
   for (let i = 0; i < 6; i++) {
+
     let dateRow = document.createElement("tr");
 
     for (let j = 0; j < 7; j++) {
